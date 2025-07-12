@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:odo}",
+            "name": "Debug odo",
+            "program": "${workspaceFolder:odo}/.build/debug/odo",
+            "preLaunchTask": "swift: Build Debug odo"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:odo}",
+            "name": "Release odo",
+            "program": "${workspaceFolder:odo}/.build/release/odo",
+            "preLaunchTask": "swift: Build Release odo"
+        }
+    ]
+}
