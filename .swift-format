@@ -1,0 +1,34 @@
+{
+	"indentConditionalCompilationBlocks": false,
+	"indentSwitchCaseLabels": true,
+	"indentation": {
+		"tabs": 1
+	},
+	"lineBreakAroundMultilineExpressionChainComponents": true,
+	"lineBreakBeforeControlFlowKeywords": true,
+	"lineBreakBeforeEachArgument": true,
+	"lineBreakBetweenDeclarationAttributes": true,
+	"lineBreakBeforeEachGenericRequirement": true,
+	"prioritizeKeepingFunctionOutputTogether": true,
+	"reflowMultilineStringLiterals": "always",
+	"respectsExistingLineBreaks": false,
+	"rules": {
+		"AlwaysUseLiteralForEmptyCollectionInit": true,
+		"AlwaysUseLowerCamelCase": true,
+		"AmbiguousTrailingClosureOverload": true,
+		"AvoidRetroactiveConformances": true,
+		"BeginDocumentationCommentWithOneLineSummary": true,
+		"DontRepeatTypeInStaticProperties": true,
+		"NeverForceUnwrap": true,
+		"NeverUseForceTry": true,
+		"NeverUseImplicitlyUnwrappedOptionals": true,
+		"NoEmptyLinesOpeningClosingBraces": true,
+		"NoLeadingUnderscores": true,
+		"UseEarlyExits": true,
+		"UseWhereClausesInForLoops": true,
+		"ValidateDocumentationComments": true
+	},
+	"spacesAroundRangeFormationOperators": true,
+	"tabWidth": 4,
+	"version": 1
+}

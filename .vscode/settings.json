@@ -1,5 +1,28 @@
 {
-    "cSpell.words": [
-        "Upsell"
-    ]
+	"cSpell.words": [
+		"alen",
+		"cpufrequency",
+		"fputs",
+		"freeifaddrs",
+		"getifaddrs",
+		"getnameinfo",
+		"ifaddrs",
+		"ifap",
+		"logicalcpu",
+		"machdep",
+		"MAXHOST",
+		"memsize",
+		"nlen",
+		"NUMERICHOST",
+		"physicalcpu",
+		"sockaddr",
+		"socklen",
+		"swapusage",
+		"sysctlbyname",
+		"targettype",
+		"Upsell"
+	],
+	"files.associations": {
+		".swift-format": "json"
+	}
 }
