@@ -11,7 +11,7 @@
 	"lineBreakBeforeEachGenericRequirement": true,
 	"prioritizeKeepingFunctionOutputTogether": true,
 	"reflowMultilineStringLiterals": "always",
-	"respectsExistingLineBreaks": false,
+	"respectsExistingLineBreaks": true,
 	"rules": {
 		"AlwaysUseLiteralForEmptyCollectionInit": true,
 		"AlwaysUseLowerCamelCase": true,

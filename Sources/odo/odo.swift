@@ -16,26 +16,18 @@ struct odo: ParsableCommand {
 	func run() throws {
 		let systemInfo = try gatherSystemInfo()
 		let jsonData = try encodeToJSON(systemInfo)
-		
-		if let jsonString = String(data: jsonData, encoding: .utf8) {
-			print(jsonString)
-		}
+		if let jsonString = String(data: jsonData, encoding: .utf8) { print(jsonString) }
 	}
-	
 	private func gatherSystemInfo() throws -> SystemInfo {
 		let cpu = try CPUInfoGatherer.gatherCPUInfo()
 		let memory = try MemoryInfoGatherer.gatherMemoryInfo()
 		let storage = try StorageInfoGatherer.gatherStorageInfo(verbose: verbose)
 		let network = try NetworkInfoGatherer.gatherNetworkInfo()
-		
 		return SystemInfo(cpu: cpu, memory: memory, storage: storage, network: network)
 	}
-	
 	private func encodeToJSON(_ systemInfo: SystemInfo) throws -> Data {
 		let encoder = JSONEncoder()
-		if prettyPrint {
-			encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
-		}
+		if prettyPrint { encoder.outputFormatting = [.prettyPrinted, .sortedKeys] }
 		return try encoder.encode(systemInfo)
 	}
 }
