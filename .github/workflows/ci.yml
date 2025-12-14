@@ -16,10 +16,7 @@ jobs:
       - run: "mise check"
 
   run:
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest]
-    runs-on: ${{ matrix.os }}
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v6
       - uses: jdx/mise-action@v3

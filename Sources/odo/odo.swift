@@ -17,6 +17,7 @@ struct odo: AsyncParsableCommand {
 	func run() async throws {
 		let probes: [any SystemProbe] = [
 			DiskProbe(),
+			NetworkProbe(),
 			OperatingSystemProbe(),
 			UptimeProbe(),
 		]
