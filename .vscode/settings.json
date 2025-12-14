@@ -13,11 +13,13 @@
 		"MAXHOST",
 		"memsize",
 		"nlen",
+		"Nonsending",
 		"NUMERICHOST",
 		"physicalcpu",
 		"sockaddr",
 		"socklen",
 		"swapusage",
+		"swiftpm",
 		"sysctlbyname",
 		"targettype",
 		"Upsell"

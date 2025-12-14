@@ -10,10 +10,38 @@ struct odo: AsyncParsableCommand {
 	@Flag(name: .shortAndLong, help: "Show verbose output")
 	var verbose = false
 
-	@Flag(name: .long, help: "Pretty print JSON output")
-	var prettyPrint = false
+	@Flag(name: .long, help: "Do not pretty print JSON output")
+	var noPrettyPrint = false
 
+	@MainActor
 	func run() async throws {
-		print("Gathering system information...")
+		let probes: [any SystemProbe] = [
+			DiskProbe(),
+			OperatingSystemProbe(),
+			UptimeProbe(),
+		]
+
+		if verbose {
+			print("Gathering system information...")
+		}
+
+		var results: [String: [String: Any]] = [:]
+
+		for probe in probes {
+			if verbose {
+				print("Running probe: \(probe.name)")
+			}
+			let data = try await probe.probe()
+			results[probe.name] = data
+		}
+
+		let jsonData = try JSONSerialization.data(
+			withJSONObject: results,
+			options: noPrettyPrint ? [.sortedKeys] : [.prettyPrinted, .sortedKeys]
+		)
+
+		if let jsonString = String(data: jsonData, encoding: .utf8) {
+			print(jsonString)
+		}
 	}
 }
