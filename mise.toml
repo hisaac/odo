@@ -1,6 +1,5 @@
 [env]
 _.file = [".env"]
-_.xcode = { version = "26" }
 
 [settings]
 activate_aggressive = true
@@ -37,3 +36,15 @@ run = [
   "rm -rf ~/Library/Caches/org.swift.swiftpm",
   "rm -rf ~/Library/org.swift.swiftpm",
 ]
+
+[tasks.check]
+alias = ["lint"]
+run = "hk check --all"
+
+[tasks.fix]
+alias = ["fmt", "format"]
+run = "hk fix --all"
+
+[tasks.upgrade]
+alias = ["bump", "update"]
+run = "mise upgrade --bump"

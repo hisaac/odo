@@ -1,0 +1,33 @@
+[[tools.actionlint]]
+version = "1.7.9"
+backend = "aqua:rhysd/actionlint"
+
+[[tools.hk]]
+version = "1.27.0"
+backend = "aqua:jdx/hk"
+
+[[tools.pkl]]
+version = "0.30.1"
+backend = "aqua:apple/pkl"
+
+[[tools.swift]]
+version = "6.2.3"
+backend = "core:swift"
+
+[[tools.usage]]
+version = "2.9.0"
+backend = "aqua:jdx/usage"
+
+[[tools.xcbeautify]]
+version = "3.1.2"
+backend = "aqua:cpisciotta/xcbeautify"
+"platforms.macos-arm64" = { checksum = "sha256:aead540db1695134943e204150b893ca1931b9d49645f61a4d25e67a2e27fbff", url = "https://github.com/cpisciotta/xcbeautify/releases/download/3.1.2/xcbeautify-3.1.2-arm64-apple-macosx.zip"}
+
+[[tools.yamllint]]
+version = "1.37.1"
+backend = "pipx:yamllint"
+
+[[tools.zizmor]]
+version = "1.18.0"
+backend = "aqua:zizmorcore/zizmor"
+"platforms.macos-arm64" = { checksum = "sha256:5c2cb76798e002b36883ddefcaaa1810300ccc1f5a9b5a855bf8954ba6a60a2e", url = "https://github.com/zizmorcore/zizmor/releases/download/v1.18.0/zizmor-aarch64-apple-darwin.tar.gz"}
