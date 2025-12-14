@@ -9,6 +9,7 @@
 	"lineBreakBeforeEachArgument": true,
 	"lineBreakBetweenDeclarationAttributes": true,
 	"lineBreakBeforeEachGenericRequirement": true,
+	"multilineTrailingCommaBehavior": "alwaysUsed",
 	"prioritizeKeepingFunctionOutputTogether": true,
 	"reflowMultilineStringLiterals": "always",
 	"respectsExistingLineBreaks": true,

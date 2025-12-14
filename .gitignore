@@ -1,3 +1,4 @@
+.env
 .DS_Store
 
 # Swift
@@ -8,6 +9,3 @@ DerivedData/
 .swiftpm/configuration/registries.json
 .swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
 .netrc
-
-# Claude
-.claude/settings.local.json

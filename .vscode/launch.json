@@ -6,8 +6,9 @@
             "args": [],
             "cwd": "${workspaceFolder:odo}",
             "name": "Debug odo",
-            "program": "${workspaceFolder:odo}/.build/debug/odo",
-            "preLaunchTask": "swift: Build Debug odo"
+            "preLaunchTask": "swift: Build Debug odo",
+            "target": "odo",
+            "configuration": "debug"
         },
         {
             "type": "swift",
@@ -15,8 +16,9 @@
             "args": [],
             "cwd": "${workspaceFolder:odo}",
             "name": "Release odo",
-            "program": "${workspaceFolder:odo}/.build/release/odo",
-            "preLaunchTask": "swift: Build Release odo"
+            "preLaunchTask": "swift: Build Release odo",
+            "target": "odo",
+            "configuration": "release"
         }
     ]
 }

@@ -1,19 +1,20 @@
-// swift-tools-version: 6.0
+// swift-tools-version: 6.2
 
 import PackageDescription
 
 let package = Package(
 	name: "odo",
+	platforms: [
+		.macOS(.v26)
+	],
 	dependencies: [
-		.package(url: "https://github.com/apple/swift-argument-parser.git", from: "1.6.1"),
-		.package(url: "https://github.com/jpsim/Yams.git", from: "5.1.3"),
+		.package(url: "https://github.com/apple/swift-argument-parser.git", from: "1.6.2")
 	],
 	targets: [
 		.executableTarget(
 			name: "odo",
 			dependencies: [
-				.product(name: "ArgumentParser", package: "swift-argument-parser"),
-				.product(name: "Yams", package: "Yams"),
+				.product(name: "ArgumentParser", package: "swift-argument-parser")
 			]
 		)
 	]

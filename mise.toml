@@ -1,0 +1,38 @@
+[env]
+_.file = [".env"]
+_.xcode = { version = "26" }
+
+[settings]
+activate_aggressive = true
+experimental = true
+
+[tools]
+actionlint = "latest"
+hk = "latest"
+pkl = "latest"
+swift = "latest"
+usage = "latest"
+xcbeautify = "latest"
+yamllint = "latest"
+
+[tasks.open]
+run = "xcrun xed ."
+
+[tasks.odo]
+run = [
+	"swift build --product odo --configuration release | xcbeautify",
+	".build/release/odo",
+]
+
+[tasks.clean]
+run = "swift package clean"
+
+[tasks.nuke]
+depends = ["clean"]
+run = [
+	"rm -rf .build",
+	"rm -rf DerivedData",
+	"rm -rf ~/Library/Developer/Xcode/DerivedData",
+	"rm -rf ~/Library/Caches/org.swift.swiftpm",
+	"rm -rf ~/Library/org.swift.swiftpm",
+]
